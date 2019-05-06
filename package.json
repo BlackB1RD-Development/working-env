@@ -1,0 +1,77 @@
+{
+  "name": "working-env",
+  "version": "1.0.0",
+  "description": "The BlackB1RD-Development developers working environment",
+  "keywords": [
+    "blackb1rd",
+    "blackb1rd-development",
+    "blackb1rd",
+    "development",
+    "env",
+    "work",
+    "working-env",
+    "environment"
+  ],
+  "homepage": "https://github.com/BlackB1RD-Development/working-env#readme",
+  "license": "MIT",
+  "readme": "README.md",
+  "bugs": {
+    "email": "blackbird.d3v@gmail.com",
+    "url": "https://github.com/BlackB1RD-Development/working-env/issues"
+  },
+  "author": {
+    "name": "BlackB1RD",
+    "email": "blackbird.d3v@gmail.com",
+    "url": "https://github.com/RealBlackB1RD"
+  },
+  "contributors": [
+    {
+      "name": "BlackB1RD-Development",
+      "email": "blackbird.d3v@gmail.com",
+      "url": "https://github.com/BlackB1RD-Development"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "BlackB1RD-Development",
+      "email": "blackbird.d3v@gmail.com",
+      "url": "https://github.com/BlackB1RD-Development"
+    }
+  ],
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test",
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlackB1RD-Development/working-env.git"
+  },
+  "devDependencies": {
+    "coveralls": "latest",
+    "gh-pages": "latest",
+    "docma": "latest",
+    "mocha": "latest",
+    "chai": "latest",
+    "nyc": "latest",
+    "xo": "latest"
+  },
+  "scripts": {
+    "prebuild": "xo && nyc mocha",
+    "build": "docma -c src/docma.json -d docs && gh-pages -d docs",
+    "test": "xo && nyc mocha"
+  },
+  "nyc": {
+    "exclude": [
+      "examples",
+      "docs",
+      "test",
+      "src"
+    ]
+  },
+  "xo": {
+    "extends": "./.eslintrc.json"
+  }
+}
