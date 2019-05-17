@@ -5,4 +5,4 @@
 // Requires - Files
 const test = require('./lib/test.js');
 
-module.exports.test = test;
+module.exports = test;
